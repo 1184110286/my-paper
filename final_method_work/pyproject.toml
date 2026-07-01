@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "malsnif-reproduce"
+version = "2.0.0"
+description = "MalSnif baseline plus AGF-ST-HGAN-MCBG idea implementation"
+requires-python = ">=3.9"
+dependencies = [
+  "torch>=1.10",
+  "numpy>=1.21",
+  "pandas>=1.3",
+  "PyYAML>=6.0",
+  "matplotlib>=3.5",
+  "scikit-learn>=1.0",
+  "tqdm>=4.60",
+  "zstandard>=0.22",
+]
+
+[tool.setuptools.packages.find]
+include = ["malsnif*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
